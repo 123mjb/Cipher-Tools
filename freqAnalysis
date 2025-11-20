@@ -12,5 +12,6 @@ for i in text:
 
 
 with open("./AnalysisResults.csv","w") as a:
+    a.write("character, frequency in ciphertext, freqency in english\n")
     for i in range(26):
         a.write(chr(i+ord('a'))+ ", "+ str(frequency[i])+ ", "+ str(realFreq[i]*len(text)/100)+ "\n")
